@@ -1,0 +1,7 @@
+{
+    "spellright.language": "German",
+    "spellright.documentTypes": [
+        "markdown",
+        "latex"
+    ]
+}

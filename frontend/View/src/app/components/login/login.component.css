@@ -1,0 +1,26 @@
+mat-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.margin {
+    margin: 4px;
+}
+
+.padding {
+    padding: 15px;
+}
+
+.input {
+    float: left;
+    clear: both;
+    margin-bottom: 5px;
+}
+
+
+.spinner {
+    margin: auto;
+    margin-top: 5%;
+}

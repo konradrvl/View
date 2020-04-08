@@ -1,0 +1,30 @@
+<mat-sidenav-container fullscreen>
+  <mat-sidenav #drawer class="sidenav" fixedInViewport="true" [attr.role]="isHandset ? 'dialog' : 'navigation'" [mode]="(isHandset | async)!.matches ? 'over' : 'side'"
+    [opened]="!(isHandset | async)!.matches">
+    <mat-toolbar color="primary">Menu</mat-toolbar>
+    <mat-nav-list>
+      <app-nav-content></app-nav-content>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content class="content">
+    <mat-toolbar color="primary">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" *ngIf="(isHandset | async)!.matches">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+
+      <span>View</span>
+      <span class="spacer"></span>
+      <mat-action-row>
+        <button type="button" mat-icon-button (click)="child.edit()" *ngIf="child && child.edit">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button type="button" mat-icon-button (click)="child.delete()" *ngIf="child && child.delete">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </mat-action-row>
+    </mat-toolbar>
+    <div class="content">
+      <router-outlet (activate)="onActivate($event)"></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

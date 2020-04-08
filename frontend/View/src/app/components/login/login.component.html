@@ -1,0 +1,54 @@
+<mat-spinner class="spinner" *ngIf="loading; else content">
+</mat-spinner>
+
+<ng-template #content>
+  <mat-card>
+    <mat-card-title>
+      Login
+    </mat-card-title>
+    <mat-card-content>
+
+      <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+
+        <mat-form-field class="input">
+          <input matInput type="input" formControlName="username">
+          <mat-label>
+            <mat-icon>
+              person
+            </mat-icon>
+            Username
+          </mat-label>
+          <mat-error *ngIf="form.username.errors">
+            Invalid!
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="input">
+          <input matInput type="password" formControlName="password">
+          <mat-label>
+            <mat-icon>
+              lock
+            </mat-icon>
+            Password
+          </mat-label>
+          <mat-error *ngIf="form.password.errors">
+            Invalid!
+          </mat-error>
+        </mat-form-field>
+
+        <mat-checkbox class="input" color="primary" formControlName="keepLoggedIn">
+          Keep me logged in!
+        </mat-checkbox>
+
+      </form>
+
+    </mat-card-content>
+    <mat-card-actions>
+
+      <button mat-raised-button class="margin" color="primary" (click)="onSubmit()" [disabled]="formGroup.invalid">Login</button>
+
+      <button mat-button class="margin" color="primary" routerLink="/register">Register</button>
+
+    </mat-card-actions>
+  </mat-card>
+</ng-template>

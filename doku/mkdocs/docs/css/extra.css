@@ -1,0 +1,29 @@
+#logo { 
+    float: right; 
+    width: 40%;
+    filter: drop-shadow(12px 12px 20px rgba(0, 0, 0, 0.8))
+}
+
+.diagram {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+
+.material-icon {
+    clear: right;
+    float: right; 
+    width: 25%;
+    margin: 10px;
+}
+
+.frontend-image {
+    width: 30%;
+    border: 1px solid black;
+}
+
+.frontend-image-big {
+    width: 70%;
+    border: 1px solid black;
+}

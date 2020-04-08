@@ -1,0 +1,19 @@
+<mat-card class="card">
+    <mat-card-header>
+
+        <mat-card-title>
+            <div class="row align-items-center">
+                <mat-icon color="accent">
+                    settings
+                </mat-icon>
+                Settings
+            </div>
+        </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+
+        <mat-slide-toggle [checked]="isDarkTheme | async" (change)="toggleDarkTheme($event.checked)">Dark theme</mat-slide-toggle>
+
+    </mat-card-content>
+
+</mat-card>

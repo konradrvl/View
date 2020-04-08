@@ -1,0 +1,15 @@
+Um die Server Umgebung und die Dokumentation zu hosten, bitte einmal:
+"docker-compose up" ausführen. 
+
+Sobald alles gebaut ist, ist die Webapplikation unter 
+http://localhost:4000
+und die Dokumentation unter
+http://localhost:8000 erreichbar.
+
+Falls du andere Anwendungen hast die folgende Ports blockieren:
+- 3306
+- 4000
+- 4711
+- 8000
+
+bitte diese vorher schließen. 

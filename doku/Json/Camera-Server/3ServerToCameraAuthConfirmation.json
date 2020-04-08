@@ -1,0 +1,4 @@
+{
+    "type": 3,
+    "success": "If the decrypted message was correct the Camera can start streaming Data" //Type Boolean
+}

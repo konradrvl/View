@@ -1,0 +1,7 @@
+{
+    "type": 0,
+	"params":	{
+					"id": "UUID String"
+				}
+    "PublicKey": "Public Key of the Camera" //Type String
+}

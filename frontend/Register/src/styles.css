@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    margin: 0px;
+}
+body { 
+    margin: 0; 
+    font-family: 'Roboto'
+}
+
+/* roboto-regular - latin */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Roboto'), local('Roboto-Regular'),
+         url('assets/fonts/roboto-v18-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('assets/fonts/roboto-v18-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  
+
+/*Stylesheet Offline:*/

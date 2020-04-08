@@ -1,0 +1,5 @@
+{
+    "type": 4,
+    "PersonCount": "Numer of Persons in Room", //Type int
+    "Timestamp": "Time when the picture was taken" //Type Time Format
+}

@@ -1,0 +1,4 @@
+Um mkdocs zu nutzen: python >= 3.4, pip
+--> pip install mkdocs
+--> pip install mkdocs-material
+to host it: mkdocs serve

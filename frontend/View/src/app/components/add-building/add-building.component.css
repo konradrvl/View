@@ -1,0 +1,21 @@
+.card {
+    padding: 20px;
+    margin: 20px;
+}
+
+.input {
+    clear: both;
+}
+
+.button {
+    clear: both;
+}
+
+.spinner {
+    margin: auto;
+    margin-top: 5%;
+}
+
+.margin {
+    margin: 4px;
+}

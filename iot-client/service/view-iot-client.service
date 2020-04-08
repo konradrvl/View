@@ -1,0 +1,12 @@
+[Unit]
+Description=view person detector
+Wants=network.target
+
+[Service]
+ExecStart=/usr/bin/view-iot-client
+RestartSec=5
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+Alias=view-iot-client.service

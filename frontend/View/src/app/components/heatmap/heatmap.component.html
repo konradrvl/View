@@ -1,0 +1,28 @@
+<mat-card class="card">
+  <mat-card-content>
+    <div class="heatmap-container" id="container">
+      <div class="box" *ngFor="let element of elements" [routerLink]="element.link" [ngStyle]="{
+                'position': 'absolute',
+                'left': element.posX + 'px',
+                'top': element.posY + 'px',
+                'width': element.width + 'px',
+                'height': element.height + 'px',
+                'background-color': getColor(element.personCount, element.maxPersonCount)
+                }">
+
+
+        <div class="personCount">
+          <p>{{element.name}}</p>
+          <mat-icon color="primary" *ngIf="element.personCount === -1; else device">videocam_off</mat-icon>
+
+          <ng-template #device>
+            <p color="primary">{{element.personCount}} / {{element.maxPersonCount}} </p>
+            <mat-icon class="person-icon" color="primary">person</mat-icon>
+          </ng-template>
+
+        </div>
+
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

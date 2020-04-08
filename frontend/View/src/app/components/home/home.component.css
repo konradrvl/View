@@ -1,0 +1,15 @@
+.icon {
+    font-size: 48px;
+}
+
+.card {
+    padding: 20px;
+    margin: 20px;
+}
+
+.image {
+    width: 40%;
+    height: auto;
+    filter: drop-shadow(12px 12px 20px rgba(0, 0, 0, 0.8));
+}
+

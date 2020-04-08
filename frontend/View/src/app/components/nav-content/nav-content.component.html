@@ -1,0 +1,55 @@
+<mat-nav-list>
+
+  <mat-list-item routerLink="home">
+    <mat-icon color="accent" mat-list-icon>home</mat-icon>
+    <h4 mat-line> Home </h4>
+  </mat-list-item>
+
+  <mat-divider class="divider"></mat-divider>
+
+  <mat-spinner class="spinner" *ngIf="loading; else content">
+  </mat-spinner>
+
+  <ng-template #content>
+    <a *ngIf="error; else result" [routerLink]="">
+      <h3 mat-subheader class="subheader">Error</h3>
+    </a>
+
+    <ng-template #result>
+      <a *ngIf="title" [routerLink]="title.link">
+        <h3 mat-subheader class="subheader">
+          <mat-icon *ngIf="title.name!='Buildings'" color="accent" mat-list-icon>keyboard_arrow_left</mat-icon>
+          {{title.name}}
+        </h3>
+      </a>
+
+      <mat-list-item *ngFor="let element of elements" [routerLink]="element.link" [disableRipple]="true">
+        <mat-icon color="accent" mat-list-icon>{{icon}}</mat-icon>
+        <h4 mat-line>{{element.name}}</h4>
+      </mat-list-item>
+
+      <mat-list-item *ngIf="add" [routerLink]="add.link">
+        <mat-icon color="accent" mat-list-icon>add</mat-icon>
+        <h4 mat-line> {{add.name}} </h4>
+      </mat-list-item>
+    </ng-template>
+  </ng-template>
+
+  <mat-divider class="divider"></mat-divider>
+
+  <mat-list-item routerLink="./ioTDevices/add">
+    <mat-icon color="accent" mat-list-icon>camera</mat-icon>
+    <h4 mat-line> Add IoTDevice </h4>
+  </mat-list-item>
+
+  <mat-list-item routerLink="settings">
+    <mat-icon color="accent" mat-list-icon>settings</mat-icon>
+    <h4 mat-line>Settings</h4>
+  </mat-list-item>
+
+  <mat-list-item routerLink="help">
+    <mat-icon color="accent" mat-list-icon>help</mat-icon>
+    <h4 mat-line> Help </h4>
+  </mat-list-item>
+
+</mat-nav-list>

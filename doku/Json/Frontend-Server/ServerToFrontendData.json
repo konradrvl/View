@@ -1,0 +1,23 @@
+{
+    "Buildings": [
+        {
+            "BuildingID": "ID of the Building", //Type String
+            "Floors": [
+                {
+                    "FloorID": "ID of the Floor", //Type String
+                    "Rooms": [
+                        {
+                            "RoomID": "ID of the Room", //Type String
+                            "Data":[
+                                {
+                                    "PersonCount": "Numer of Persons in Room", //Type int
+                                    "Timestamp": "Time when the picture was taken" //Type Time Format
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

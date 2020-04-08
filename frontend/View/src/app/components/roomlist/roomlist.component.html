@@ -1,0 +1,15 @@
+<mat-list>
+  <mat-list-item *ngFor="let room of roomElements" [routerLink]="room.link">
+
+    <mat-icon matListIcon color="accent">view_compact</mat-icon>
+    <p> {{room.name}}</p>
+    <span class="room-spacer"></span>
+    <mat-icon color="accent" *ngIf="room.personCount === -1; else device">videocam_off</mat-icon>
+    <ng-template #device>
+      <p>{{room.personCount}} / {{room.maxPersonCount}} </p>
+      <mat-icon class="person-icon" color="accent">person</mat-icon>
+    </ng-template>
+  </mat-list-item>
+
+
+</mat-list>

@@ -1,0 +1,6 @@
+<mat-card class="floor-card" *ngFor="let element of elements">
+  <mat-card-content>
+    <mat-toolbar color="primary">{{element.name}}</mat-toolbar>
+    <app-roomlist [floor]="element"></app-roomlist>
+  </mat-card-content>
+</mat-card>

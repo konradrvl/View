@@ -1,0 +1,23 @@
+<mat-card class="card">
+  <mat-card-content *ngIf="rooms">
+
+    <div class="heatmap-container" #boundary [ngClass]="{
+    'top-b': !edge?.top,
+    'bottom-b': !edge?.bottom,
+    'left-b': !edge?.left,
+    'right-b': !edge?.right
+  }">
+      <div ngResizable ngDraggable class="box" *ngFor="let room of rooms; let i = index" [bounds]="boundary" [inBounds]="inBounds"
+        #block="ngResizable" rzHandles="all" (endOffset)="dragged($event, room)" (rzStop)="resized($event, room)" [ngStyle]="{
+                'position': 'absolute',
+                'left': room.posX + 'px',
+                'top': room.posY + 'px',
+                'width': room.width + 'px',
+                'height': room.height + 'px'
+                }">
+        <p class="roomCenter">{{room.name}}</p>
+
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

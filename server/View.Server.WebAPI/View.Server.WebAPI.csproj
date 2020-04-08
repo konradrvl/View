@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyName>view-server</AssemblyName>
+    <Prefix>/opt/view-server</Prefix>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TrimUnusedDependencies>true</TrimUnusedDependencies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.6" />
+    <PackageReference Include="Microsoft.Packaging.Tools.Trimming" Version="1.1.0-preview1-26619-01" />
+    <PackageReference Include="Packaging.Targets" Version="0.1.1-*" />
+    <DotNetCliToolReference Include="dotnet-tarball" Version="0.1.1-*" />
+    <DotNetCliToolReference Include="dotnet-deb" Version="0.1.1-*" />
+    <DotNetCliToolReference Include="dotnet-rpm" Version="0.1.1-*" />
+    <DotNetCliToolReference Include="dotnet-zip" Version="0.1.1-*" />
+  </ItemGroup>
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.3" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\View.Server.DbAccess\View.Server.DbAccess.csproj" />
+    <ProjectReference Include="..\View.Server.Service\View.Server.Service.csproj" />
+    <ProjectReference Include="..\View.Server.Shared\View.Server.Shared.csproj" />
+    <ProjectReference Include="..\View.Server.WsIoTAccess\View.Server.WsIoTAccess.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\assets\Logo.svg" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\LogoTransparent.png" />
+  </ItemGroup>
+</Project>

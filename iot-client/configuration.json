@@ -1,0 +1,9 @@
+{
+  "url": "ws://localhost:4711",
+  "serialNumber": "1",
+  "cfg": "data/cfg/yolov2.cfg",
+  "weights": "data/yolov2.weights",
+  "names": "data/data/coco.names",
+  "threshold": 0.6,
+  "cameraDevice": 0@WIFI_CONNECTOR_CONFIG_PARAMS@@DEBUG_CONFIG_PARAMS@
+}

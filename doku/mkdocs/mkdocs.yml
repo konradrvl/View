@@ -1,0 +1,79 @@
+site_name: View Dokumentation
+
+theme:
+        name: 'material'
+        site_favicon: 'img/logo.ico'
+        logo: 'img/logo.svg'
+
+
+include_sidebar: true
+
+extra_css:
+        - 'css/extra.css'
+
+markdown_extensions:
+        - codehilite
+        - pymdownx.details
+
+pages:
+        - Einführung : index.md
+        - Architektur: 
+                - Übersicht: architecture/index.md
+                - IoT-Device: architecture/iotdevice.md
+                - Frontend: architecture/frontend.md
+        - Erste Schritte:
+                - Server: getting-started/server.md
+                - Person detector: getting-started/person-detector.md
+        - Download: downloads.md
+        - Handbuch:
+                - Frontend: manual/frontend.md
+                - Server: manual/server.md
+                - Person detector: manual/person-detector.md
+        - Developer Guide:
+                - Frontend:
+                        - Compilieren: dev/frontend/compile.md
+                        - Architektur: dev/frontend/architecture.md
+                        - Module:
+                                - View Webapplikation: dev/frontend/modules/webapp.md
+                                - WIFI Connector: dev/frontend/modules/wifi.md
+                        - Tests:
+                                - Übersicht: dev/frontend/tests/index.md
+                                - Login: dev/frontend/tests/login.md
+                                - Register: dev/frontend/tests/register.md
+                                - Building: dev/frontend/tests/building.md
+                                - Nav-Content: dev/frontend/tests/nav-content.md
+                                - AddIoTDevice: dev/frontend/tests/addiotdevice.md
+                                - Settings: dev/frontend/tests/settings.md
+                                - EditBuilding: dev/frontend/tests/editBuilding.md
+                                - EditFloor: dev/frontend/tests/editFloor.md
+                                - EditRoom: dev/frontend/tests/editRoom.md
+                                - AddBuilding: dev/frontend/tests/addBuilding.md
+                                - AddFloor: dev/frontend/tests/addFloor.md
+                                - AddRoom: dev/frontend/tests/addRoom.md
+                - Server:
+                        - Compilieren: dev/server/compile.md
+                        - Architektur: dev/server/architecture.md
+
+                        - Module:
+                                - DbAccess: dev/server/modules/dbaccess.md
+                                - Service: dev/server/modules/service.md
+                                - Shared: dev/server/modules/shared.md
+                                - WebAPI: dev/server/modules/webapi.md
+                                - WsIoTAccess: dev/server/modules/wsiotaccess.md
+                - IoT-Device:
+                        - Compilieren: dev/iotdevice/compile.md
+                        - Architektur: dev/iotdevice/architecture.md
+                        - Module:
+                                - Core: dev/iotdevice/modules/core.md
+                                - Wifi Connector: dev/iotdevice/modules/wifi.md
+                        - Tests:
+                                - Core Komponente: dev/iotdevice/tests/core.md
+                                - Wifi Connector: dev/iotdevice/tests/wifi.md
+                - Schnitstellen:
+                        - Frontend <-> Server: dev/interfaces/frontendServer.md
+                        - IoT-Device <-> Server: dev/interfaces/iotDeviceServer.md
+                        - WiFi-Frontend -> IoT-Device: dev/interfaces/wifiFrontendIotDevice.md
+                - Continuous integration: dev/ci.md
+
+plugins:
+        - search

@@ -1,0 +1,4 @@
+{
+    "type": 1,
+    "encryptedCode": "Encrypted Code for the Camera to decrypt with its private Key" //Type String
+}

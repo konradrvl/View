@@ -1,0 +1,22 @@
+{
+    //Warum hier und nicht in Rooms? Weil es einfacher ist und es keinen wirklichen Sinn macht die Räume mit unterschiedlichen Timestamps abzufragen
+    "LiveData": "if this is true, the last value from a Camera is given to the User at the top Of the arr", //Type bool
+    "From": "Time of the first Dataset(last in arr)", //Type Time Format
+    "To": "Time to the last Dataset(first in arr)", //Type Time Format
+
+    "Buildings": [
+        {
+            "BuildingID": "ID of the Building", //Type String
+            "Floors": [
+                {
+                    "FloorID": "ID of the Floor", //Type String
+                    "Rooms": [
+                        {
+                            "RoomID": "ID of the Room" //Type String
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

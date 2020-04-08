@@ -1,0 +1,25 @@
+.heatmap-container {
+    position: relative;
+    width: 500px;
+    height: 500px;
+}
+
+.card {
+    padding: 20px;
+    margin: 20px;
+}
+
+.box {
+    transition: box-shadow .3s;
+}
+
+.box:hover {
+    box-shadow: 0 0 20px rgba(63,81,181,.65);
+  }
+
+.personCount{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}

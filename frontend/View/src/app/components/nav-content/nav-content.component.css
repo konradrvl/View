@@ -1,0 +1,26 @@
+.divider {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.subheader {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.card {
+    padding: 20px;
+    margin: 20px;
+}
+
+.input {
+    clear: both;
+}
+
+.button {
+    clear: both;
+}
+
+.spinner {
+    margin: auto;
+    margin-top: 5%;
+}

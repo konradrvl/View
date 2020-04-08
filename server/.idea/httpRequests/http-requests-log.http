@@ -1,0 +1,22 @@
+GET http://localhost:5000/api/buildings/?username=ich
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-06-18T122128.500.html
+
+###
+
+GET http://localhost:5000/api/buildings/
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-06-18T122018.500.html
+
+###
+
+GET http://localhost:5000/api/
+Accept: */*
+Cache-Control: no-cache
+
+###
+
